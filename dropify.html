@@ -5,14 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Bootstrap Website</title>
+  <title>Dropify Plugin</title>
 
   <!-- loading favicon -->
   <link rel="icon" href="./images/bootstrap-logo.jpg" type="image/x-icon"/>
   <link rel="shortcut icon" href="./images/bootstrap-logo.jpg" type="image/x-icon"/>
 
-  <!-- loading bootstrap -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- loading bootstrap css file-->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="./css/bootstrap-reboot.min.css">
+
+  <!-- loading Dropify plugin css file-->
+  <link rel="stylesheet" href="./css/dropify.min.css">
+
+  <!-- loading font awesome -->
+  <link rel="stylesheet" href="./fonts/dropify.ttf">
 
   <!-- loading styles.css -->
   <link rel="stylesheet" href="css/styles.css">
@@ -67,37 +75,13 @@
     </header>
 
     <div class="container m-auto">
-      <div class="row p-4">
-        <div class="col-6">
-          <h3>Introduction to Bootstrap...</h3>
-          <p>Bootstrap is an open source toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or
-            build your entire app with our Sass variables and mixins, responsive grid system, extensive prebuilt
-            components, and powerful plugins built on jQuery.</p>
+        <div class="jumbotron">
+            <input type="file" class="dropify">
         </div>
-        <div class="col-6">
-          <img src="./images/bootstrap-stack.png" class="img-thumbnail">
+
+        <div class="jumbotron">
+            <input type="file" class="dropify">
         </div>
-      </div>
-      <div class="row p-4">
-        <div class="col-6">
-          <img src="./images/grid-system.png" class="img-thumbnail">
-        </div>
-        <div class="col-6">
-          <h3>Bootstrap Grid System...</h3>
-          <p>Bootstrap’s grid system uses a series of containers, rows, and columns to layout and align content. It’s
-            built with flexbox and is fully responsive. Below is an example and an in-depth look at how the grid comes
-            together.</p>
-        </div>
-      </div>
-      <div class="row p-4">
-        <div class="col-6">
-          <h3>Themes...</h3>
-          <p>The Boostrap team reviews every new theme and update against a set of guidelines we wrote. These cover tons of factors including design, component flexibility, class naming, directory structure, build tooling, plugin reusability…the list goes on and on.</p>
-        </div>
-        <div class="col-6">
-          <img src="./images/bootswatch.png" class="img-thumbnail">
-        </div>
-      </div>
     </div>
 
     <footer class="container-fluid bg-dark">
@@ -107,11 +91,20 @@
     </footer>
   </div>
 
-  <!-- loading jQuery -->
-  <script src="js/jquery.min.js"></script>
-  <!-- loading Popper.min.js - needed after respone navigation click show nav menu -->
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+   <!-- loading jQuery -->
+   <script src="./js/jquery.min.js"></script>
+   <!-- loading Bootstrap js file Popper.min.js - needed after respone navigation click show nav menu -->
+   <script src="./js/bootstrap.min.js"></script>
+   <script src="./js/bootstrap.bundle.min.js"></script>
+
+   <!-- loading js file Dropify plugin -->
+   <script src="./js/dropify.min.js"></script>
+
+   <!-- Custom js file who called Dropify plugin with functions! -->
+   <script>
+      // Dropify Plugin
+      $('.dropify').dropify();
+   </script>
 </body>
 
 </html>
